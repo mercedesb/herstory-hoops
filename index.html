@@ -4,15 +4,16 @@ layout: base_layout.html
 ---
 
 <h1>Through Hoops</h1>
-
-<ul class="flex flex-wrap justify-center list-none">
+<ul
+  class="relative grow m-auto max-w-screen-xl grid grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-1 justify-items-center align-center list-none"
+>
   {%- for hoop in hoops %}
-  <li class="m-1 rounded-full w-52 relative hover:cursor-pointer">
+  <li class="rounded-full relative hoop-list-item">
     <a href="hoops/{{hoop.name | slugify }}/">
       <img
         src="{{ hoop.img }}"
         alt="{{ hoop.name }}"
-        class="w-48 relative rounded-full inset-1/2 transition-transform duration-700 ease-linear overflow-hidden hover:z-10 hover:cursor-pointer hoop-image"
+        class="relative rounded-full inset-1/2 transition-transform duration-700 ease-linear overflow-hidden hover:z-10 hoop-image"
       />
     </a>
   </li>
