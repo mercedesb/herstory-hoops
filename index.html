@@ -1,0 +1,20 @@
+---
+title: Through Hoops
+layout: base_layout.html
+---
+
+<h1>Through Hoops</h1>
+
+<ul class="flex flex-wrap justify-center list-none">
+  {%- for hoop in hoops %}
+  <li class="m-1 rounded-full w-52 relative hover:cursor-pointer">
+    <a href="hoops/{{hoop.name | slugify }}/">
+      <img
+        src="{{ hoop.img }}"
+        alt="{{ hoop.name }}"
+        class="w-48 relative rounded-full inset-1/2 transition-transform duration-700 ease-linear overflow-hidden hover:z-10 hover:cursor-pointer hoop-image"
+      />
+    </a>
+  </li>
+  {% endfor -%}
+</ul>
