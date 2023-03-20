@@ -20,11 +20,11 @@
         <nav class="flex justify-between mb-8 text-xl">
           <a href="/"> {% render 'logo.html' %} </a>
           <ul class="list-none flex items-center">
-            <li class="mr-4"><a href="/about">About</a></li>
+            <li class="mr-8"><a href="/about">About</a></li>
             <li>{% render 'dark_mode_toggle.html' %}</li>
           </ul>
         </nav>
-        {{ content }}
+        <main class="mb-8">{{ content }}</main>
         <footer class="flex justify-end mt-8 text-xs">
           <p>
             Made with ❤️ by
