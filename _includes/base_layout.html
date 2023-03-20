@@ -4,9 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{{ '/assets/styles/tailwind.css' | url }}" />
   </head>
-  <body>
-    {{ content }}
+  <body class="font-body leading-7">
+    <div class="bg-light text-dark dark:bg-dark dark:text-light min-h-screen">
+      <div class="max-w-screen-xl py-8 mx-auto px-8">
+        <nav class="flex justify-between mb-4 text-xl">
+          <a href="/"> {% render 'logo.html' %} </a>
+          <ul class="list-none flex items-center">
+            <li class="mr-4"><a href="/about">About</a></li>
+            <li>{% render 'dark_mode_toggle.html' %}</li>
+          </ul>
+        </nav>
+        {{ content }}
+        <footer class="flex justify-end mt-8">
+          <p>
+            Made with ❤️ by
+            <a href="https://mercedesbernard.com">Mercedes Bernard</a>
+          </p>
+        </footer>
+      </div>
+    </div>
+    <script>
+      {% include "../assets/scripts/darkMode.js" %}
+    </script>
   </body>
 </html>
