@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base styles */
+
+a {
+  text-decoration: underline;
+}
+
+/* Dark mode toggle */
+
+.toggle::before {
+  content: '';
+  position: absolute;
+  width: theme('spacing.3');
+  height: theme('spacing.3');
+  top: .375rem;
+  left: .125rem;
+  background-color: theme('colors.light');
+  border-radius: 9999px;
+  z-index: 10;
+  transition-duration: 200ms;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.toggle.checked::before {
+  transform: translate(135%);
+}
+
+input:focus~.toggle {
+  /* Adds a light border around the button, along with a dark glow. The light and dark have a color contrast ratio of at least 3:1, which means this will work against any background color. */
+  box-shadow: 0 0 0 2px theme("colors.light"),
+    0 0 3px 5px theme("colors.dark");
+  /* NOTE: box-shadow is invisible in Windows high-contrast mode, so we need to add a transparent outline, which actually does show up in high-contrast mode. */
+  outline: 2px dotted transparent;
+  outline-offset: 2px;
+}
+
 .hoop-list-item {
   grid-column: span 2;
 }
