@@ -49,6 +49,8 @@ input:focus~.toggle {
   outline-offset: 2px;
 }
 
+/* custom home gallery styling */
+
 .hoop-list-item {
   grid-column: span 2;
 }
@@ -79,12 +81,4 @@ input:focus~.toggle {
   .hoop-list-item:nth-child(9n + 1) {
     grid-column: 2 / span 2;
   }
-}
-
-.hoop-image {
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.hoop-image:hover {
-  transform: translateX(-50%) translateY(-50%) scale(2);
 }

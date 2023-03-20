@@ -20,6 +20,9 @@ module.exports = {
         light: "#ECEFE6",
         dark: "#161810",
       },
+      scale: {
+        200: "2",
+      },
     },
     fontFamily: {
       display: ["Special Elite"],
