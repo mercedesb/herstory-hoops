@@ -12,10 +12,10 @@
     />
     <link rel="stylesheet" href="{{ '/assets/styles/tailwind.css' | url }}" />
   </head>
-  <body class="font-body leading-7">
+  <body class="font-body leading-7 text-xl">
     <div class="bg-light text-dark dark:bg-dark dark:text-light min-h-screen">
-      <div class="max-w-screen-xl py-8 mx-auto px-8">
-        <nav class="flex justify-between mb-4 text-xl">
+      <div class="max-w-screen-xl pt-6 pb-8 mx-auto px-8">
+        <nav class="flex justify-between mb-8 text-xl">
           <a href="/"> {% render 'logo.html' %} </a>
           <ul class="list-none flex items-center">
             <li class="mr-4"><a href="/about">About</a></li>
@@ -23,7 +23,7 @@
           </ul>
         </nav>
         {{ content }}
-        <footer class="flex justify-end mt-8">
+        <footer class="flex justify-end mt-8 text-xs">
           <p>
             Made with ❤️ by
             <a href="https://mercedesbernard.com">Mercedes Bernard</a>

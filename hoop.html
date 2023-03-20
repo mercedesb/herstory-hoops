@@ -6,7 +6,7 @@ pagination:
 permalink: "hoops/{{ hoop.name | slugify }}/"
 layout: base_layout.html
 eleventyComputed:
-  title: "{{ hoop.name }}"
+  title: "{{ hoop.name }} | Through Hoops"
 ---
 
 {% assign paragraphs = hoop.bio | newline_to_br | split: '<br />' %}
@@ -14,7 +14,7 @@ eleventyComputed:
 <main class="grid grid-cols-6 gap-8 mb-8">
   <img src="/{{ hoop.img }}" alt="{{ hoop.name }}" class="col-span-2" />
   <section class="col-span-4">
-    <h1 class="font-display text-5xl">{{ hoop.name }}</h1>
+    <h1 class="font-display text-6xl">{{ hoop.name }}</h1>
 
     {% for paragraph in paragraphs %}
     <p class="mb-4">{{ paragraph }}</p>
@@ -22,6 +22,6 @@ eleventyComputed:
   </section>
 </main>
 <footer class="text-center">
-  <h2 class="font-display text-xl">"{{hoop.quote}}"</h2>
+  <h2 class="font-display text-2xl">"{{hoop.quote}}"</h2>
   <p><small>{{ hoop.quote_location }}</small></p>
 </footer>
