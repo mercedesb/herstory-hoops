@@ -6,15 +6,14 @@ layout: base_layout.html
 <ul
   class="relative grow m-auto grid grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-1 justify-items-center align-center list-none"
 >
-  {%- for hoop in hoops %}
-  <li class="rounded-full relative hoop-list-item">
-    <a href="hoops/{{hoop.name | slugify }}/">
-      <img
-        src="/{{ hoop.img }}"
-        alt="{{ hoop.name }}"
-        class="relative rounded-full transition-transform duration-700 ease-linear hover:z-10 hover:scale-200"
-      />
-    </a>
-  </li>
+  {%- for hoop in hoops %} 
+    {% assign slug = hoop.name | slugify %}
+    <li class="rounded-full relative hoop-list-item">
+      <a href="{{ "/hoops/" | append: slug | url}}">
+        <img src="{{"/" | append: hoop.img | url}}" alt="{{ hoop.name }}"
+        class="relative rounded-full transition-transform duration-700 ease-linear
+        hover:z-10 hover:scale-200" />
+      </a>
+    </li>
   {% endfor -%}
 </ul>
