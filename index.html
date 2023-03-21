@@ -9,10 +9,11 @@ layout: base_layout.html
   {%- for hoop in hoops %} 
     {% assign slug = hoop.name | slugify %}
     <li class="rounded-full relative hoop-list-item">
-      <a href="{{ "/hoops/" | append: slug | url}}">
-        <img src="{{"/" | append: hoop.img | url}}" alt="{{ hoop.name }}"
+      <a href="{{ "/hoops/" | append: slug | url}}" class="no-underline">
+        <img src="{{"/" | append: hoop.thumb_img | url}}" alt="{{ hoop.name }}"
         class="relative rounded-full transition-transform duration-700 ease-linear
         hover:z-10 hover:scale-200" />
+        <p class="text-center mt-2 mb-4 font-display text-sm">{{hoop.name}}</p>
       </a>
     </li>
   {% endfor -%}

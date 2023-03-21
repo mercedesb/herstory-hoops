@@ -9,7 +9,7 @@ body {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration-line: underline;
 }
 
 /* Dark mode toggle */
@@ -81,4 +81,16 @@ input:focus~.toggle {
   .hoop-list-item:nth-child(9n + 1) {
     grid-column: 2 / span 2;
   }
+}
+
+/* Magnify image */
+#magnify {
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position:center;
+}
+
+#zoom:hover #magnify, #zoom:active #magnify {
+  opacity: 1;
 }
