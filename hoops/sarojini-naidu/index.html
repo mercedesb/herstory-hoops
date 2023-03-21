@@ -161,8 +161,16 @@
  
 
 <div class="grid grid-cols-6 gap-8 mb-8">
-  <img src="/herstory-hoops/assets/images/bell_hooks.png" alt="Sarojini Naidu"
-  class="col-span-2" />
+  <div class="col-span-2 relative" id="zoom">
+    <img src="/herstory-hoops/assets/images/bell_hooks_small.png" alt="Sarojini Naidu"
+    class="w-full"
+    id="magnify-image" /> 
+    <div
+      id="magnify"
+      style="background-image: url('/herstory-hoops/assets/images/bell_hooks.png');"
+      class="w-24 h-24 absolute pointer-events-none rounded-full z-10 opacity-0 border border-4 border-light shadow-[0_5px_10px_-2px_rgba(0,0,0,0.3)] transition-opacity ease-linear duration-200"
+    ></div>
+  </div>
   <section class="col-span-4">
     <h1 class="font-display text-6xl">Sarojini Naidu</h1>
 
@@ -181,6 +189,44 @@ In 1925, she became the first woman president of the Indian National Congress. W
   <h2 class="font-display text-2xl">"When there is oppression, the only self-respecting thing is to rise and say this shall cease today, because my right is justice. If you are stronger, you have to help the weaker boy or girl both in play and in the work."</h2>
   <p><small></small></p>
 </footer>
+<script>
+  document.getElementById("zoom").addEventListener(
+  "mousemove",
+  function (e) {
+    let original = document.getElementById("magnify-image"),
+      magnified = document.getElementById("magnify"),
+      style = magnified.style,
+      x = e.pageX - this.offsetLeft,
+      y = e.pageY - this.offsetTop,
+      imgWidth = original.width,
+      imgHeight = original.height,
+      xPercent = (x / imgWidth) * 100,
+      yPercent = (y / imgHeight) * 100;
+
+    // Add some margin for right edge
+    if (x > 0.01 * imgWidth) {
+      xPercent += 0.15 * xPercent;
+    }
+
+    // Add some margin for bottom edge
+    if (y >= 0.01 * imgHeight) {
+      yPercent += 0.15 * yPercent;
+    }
+
+    // Set the background of the magnified image horizontal
+    style.backgroundPositionX = xPercent - 9 + "%";
+
+    // Set the background of the magnified image vertical
+    style.backgroundPositionY = yPercent - 9 + "%";
+
+    // Move the magnifying glass with the mouse movement.
+    style.left = x - 50 + "px";
+    style.top = y - 50 + "px";
+  },
+  false
+);
+
+</script>
 </main>
         <footer class="flex justify-end mt-8 text-xs">
           <p>

@@ -161,8 +161,16 @@
  
 
 <div class="grid grid-cols-6 gap-8 mb-8">
-  <img src="/herstory-hoops/assets/images/bell_hooks.png" alt="Mary Ware Dennett"
-  class="col-span-2" />
+  <div class="col-span-2 relative" id="zoom">
+    <img src="/herstory-hoops/assets/images/bell_hooks_small.png" alt="Mary Ware Dennett"
+    class="w-full"
+    id="magnify-image" /> 
+    <div
+      id="magnify"
+      style="background-image: url('/herstory-hoops/assets/images/bell_hooks.png');"
+      class="w-24 h-24 absolute pointer-events-none rounded-full z-10 opacity-0 border border-4 border-light shadow-[0_5px_10px_-2px_rgba(0,0,0,0.3)] transition-opacity ease-linear duration-200"
+    ></div>
+  </div>
   <section class="col-span-4">
     <h1 class="font-display text-6xl">Mary Ware Dennett</h1>
 
@@ -193,6 +201,44 @@ Dennett believed in unrestricted access to contraceptives and birth control info
   <h2 class="font-display text-2xl">"By a rhythmic movement of the penis in and out, the sex act reaches an exciting climax or orgasm, when there is for the woman a peculiarly satisfying contraction of the muscles of the passage and for the man, the expulsion of the semen, the liquid which contains the germs of life. This is followed by a sensation of peaceful happiness and sleepy relaxation. It is the very greatest physical pleasure to be had in all human experience, and it helps very much to increase all other kinds of pleasure also."</h2>
   <p><small></small></p>
 </footer>
+<script>
+  document.getElementById("zoom").addEventListener(
+  "mousemove",
+  function (e) {
+    let original = document.getElementById("magnify-image"),
+      magnified = document.getElementById("magnify"),
+      style = magnified.style,
+      x = e.pageX - this.offsetLeft,
+      y = e.pageY - this.offsetTop,
+      imgWidth = original.width,
+      imgHeight = original.height,
+      xPercent = (x / imgWidth) * 100,
+      yPercent = (y / imgHeight) * 100;
+
+    // Add some margin for right edge
+    if (x > 0.01 * imgWidth) {
+      xPercent += 0.15 * xPercent;
+    }
+
+    // Add some margin for bottom edge
+    if (y >= 0.01 * imgHeight) {
+      yPercent += 0.15 * yPercent;
+    }
+
+    // Set the background of the magnified image horizontal
+    style.backgroundPositionX = xPercent - 9 + "%";
+
+    // Set the background of the magnified image vertical
+    style.backgroundPositionY = yPercent - 9 + "%";
+
+    // Move the magnifying glass with the mouse movement.
+    style.left = x - 50 + "px";
+    style.top = y - 50 + "px";
+  },
+  false
+);
+
+</script>
 </main>
         <footer class="flex justify-end mt-8 text-xs">
           <p>
