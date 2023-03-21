@@ -18,7 +18,7 @@
     >
       <div class="max-w-screen-xl pt-6 pb-8 mx-auto px-8">
         <nav class="flex justify-between mb-8 text-xl">
-          <a href="/"> {% render '_logo.html' %} </a>
+          <a href="{{ '/' | url }}"> {% render '_logo.html' %} </a>
           <ul class="list-none flex items-center">
             <li class="mr-8"><a href="{{ '/about' | url }}">About</a></li>
             <li>{% render '_dark_mode_toggle.html' %}</li>
