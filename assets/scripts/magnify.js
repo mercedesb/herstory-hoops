@@ -28,8 +28,8 @@ document.getElementById("zoom").addEventListener(
     style.backgroundPositionY = yPercent - 9 + "%";
 
     // Move the magnifying glass with the mouse movement.
-    style.left = x - 50 + "px";
-    style.top = y - 50 + "px";
+    style.left = x - 72 + "px";
+    style.top = y - 72 + "px";
   },
   false
 );
