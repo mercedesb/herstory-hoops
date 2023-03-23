@@ -790,6 +790,10 @@ video {
   width: 100%;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .max-w-none {
   max-width: none;
 }
@@ -1605,10 +1609,6 @@ input:focus~.toggle {
 
   .lg\:mb-0 {
     margin-bottom: 0px;
-  }
-
-  .lg\:w-3\/4 {
-    width: 75%;
   }
 
   .lg\:grid-cols-10 {

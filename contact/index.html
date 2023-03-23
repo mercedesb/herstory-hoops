@@ -163,61 +163,62 @@
           </ul>
         </nav>
         <main class="mb-8 mt-2">
-<h1>Contact</h1>
+<div class="max-w-4xl">
+  <h1>Contact</h1>
 
-<div>
-  <p class="text-orange-700 hidden" id="form-error">
-    Oops, an error occurred trying to submit the form. Please try again.
-  </p>
-</div>
-<form class="flex flex-col w-full lg:w-3/4" id="contact-form">
-  <label class="flex flex-col">
-    <span>Name</span>
+  <div>
+    <p class="text-orange-700 hidden" id="form-error">
+      Oops, an error occurred trying to submit the form. Please try again.
+    </p>
+  </div>
+  <form class="flex flex-col w-full" id="contact-form">
+    <label class="flex flex-col">
+      <span>Name</span>
+      <input
+        class="mb-8 p-2 dark:text-dark dark:bg-light"
+        type="text"
+        name="name"
+        required
+      />
+    </label>
+    <label class="flex flex-col">
+      <span>Email</span>
+      <input
+        class="mb-8 p-2 dark:text-dark dark:bg-light"
+        type="email"
+        name="email"
+        required
+      />
+    </label>
+    <label class="flex flex-col">
+      <span>Message</span>
+      <textarea
+        class="mb-8 p-2 dark:text-dark dark:bg-light"
+        rows="4"
+        name="message"
+        required
+      ></textarea>
+    </label>
+    <input type="hidden" name="_gotcha" style="display: none !important" />
     <input
-      class="mb-8 p-2 dark:text-dark dark:bg-light"
-      type="text"
-      name="name"
-      required
+      type="hidden"
+      name="from"
+      style="display: none !important"
+      value="through-hoops"
     />
-  </label>
-  <label class="flex flex-col">
-    <span>Email</span>
-    <input
-      class="mb-8 p-2 dark:text-dark dark:bg-light"
-      type="email"
-      name="email"
-      required
-    />
-  </label>
-  <label class="flex flex-col">
-    <span>Message</span>
-    <textarea
-      class="mb-8 p-2 dark:text-dark dark:bg-light"
-      rows="4"
-      name="message"
-      required
-    ></textarea>
-  </label>
-  <input type="hidden" name="_gotcha" style="display: none !important" />
-  <input
-    type="hidden"
-    name="from"
-    style="display: none !important"
-    value="through-hoops"
-  />
-  <button
-    type="submit"
-    class="px-3 py-3 border rounded-lg w-40 self-end bg-green-600 dark:bg-dark text-light font-bold"
-  >
-    Send
-  </button>
-</form>
-<h2 class="text-green-600 dark:text-light hidden" id="form-success">
-  Thank you for your message, I'll be in touch soon!
-</h2>
+    <button
+      type="submit"
+      class="px-3 py-3 border rounded-lg w-40 self-end bg-green-600 dark:bg-dark text-light font-bold"
+    >
+      Send
+    </button>
+  </form>
+  <h2 class="text-green-600 dark:text-light hidden" id="form-success">
+    Thank you for your message, I'll be in touch soon!
+  </h2>
 
-<script>
-  async function handleContactSubmit(e) {
+  <script>
+    async function handleContactSubmit(e) {
   e.preventDefault();
   const form = e.target;
 
@@ -243,7 +244,8 @@ document
   .getElementById("contact-form")
   .addEventListener("submit", handleContactSubmit);
 
-</script>
+  </script>
+</div>
 </main>
         <footer class="flex justify-end mt-8 text-xs">
           <p>
