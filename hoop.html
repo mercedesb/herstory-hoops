@@ -13,17 +13,14 @@ eleventyComputed:
 quoteLines = hoop.quote | newline_to_br %}
 
 <div class="grid grid-cols-6 gap-2 mb-8">
-  <div class="col-span-2 relative -ml-8" id="zoom">
-    <img src="{{ "/" | append: hoop.thumb_img | url }}" alt="{{ hoop.name }}"
-    class="w-full"
-    id="magnify-image" /> 
-    <div
-      id="magnify"
-      style="background-image: url('{{ "/" | append: hoop.img | url }}');"
-      class="w-36 h-36 absolute pointer-events-none rounded-full z-10 opacity-0 border border-4 border-light shadow-[0_5px_10px_-2px_rgba(0,0,0,0.3)] transition-opacity ease-linear duration-200"
-    ></div>
+  <div
+    class="col-span-6 lg:col-span-2 relative mb-4 lg:mb-0 lg:-ml-8"
+    id="zoom"
+  >
+    <img src="{{"/assets/images/" | append: hoop.img_name | append: "_small.png"
+    | url}}" alt="{{ hoop.name }}" class="w-full" id="magnify-image"/>
   </div>
-  <section class="col-span-4">
+  <section class="col-span-6 lg:col-span-4">
     <h1>{{ hoop.name }}</h1>
 
     {% for paragraph in paragraphs %}
@@ -37,4 +34,5 @@ quoteLines = hoop.quote | newline_to_br %}
 </footer>
 <script>
   {% include "assets/scripts/magnify.js" %}
+  createMagnifyElement("{{"/assets/images/" | append: hoop.img_name | append: ".png" | url}}")
 </script>

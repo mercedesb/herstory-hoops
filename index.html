@@ -4,15 +4,28 @@ layout: base_layout.html
 ---
 
 <ul
-  class="relative grow m-auto grid grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-1 justify-items-center align-center list-none"
+  class="grow m-auto grid grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-1 justify-items-center align-center list-none"
 >
   {%- for hoop in hoops %} 
     {% assign slug = hoop.name | slugify %}
-    <li class="rounded-full relative hoop-list-item">
+    <li class="hoop-list-item">
       <a href="{{ "/hoops/" | append: slug | url}}" class="no-underline">
-        <img src="{{"/" | append: hoop.thumb_img | url}}" alt="{{ hoop.name }}"
-        class="relative rounded-full transition-transform duration-700 ease-linear
-        hover:z-10 hover:scale-200" />
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcset="{{"/assets/images/" | append: hoop.img_name | append: "_small.png" | url}}"
+          />
+          <source
+            srcset="{{"/assets/images/" | append: hoop.img_name | append: "_thumb.png" | url}}"
+          />
+          <!-- For browsers that do not support picture element -->
+          <img 
+            src="{{"/assets/images/" | append: hoop.img_name | append: "_small.png" | url}}" 
+            alt="{{ hoop.name }}" 
+            class="transition-transform duration-700 ease-linear hover:z-10 lg:hover:scale-200"
+           />
+        </picture>
+        </span>
         <p class="text-center mt-2 mb-4 font-display text-sm">{{hoop.name}}</p>
       </a>
     </li>

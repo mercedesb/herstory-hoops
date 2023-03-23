@@ -33,3 +33,19 @@ document.getElementById("zoom").addEventListener(
   },
   false
 );
+
+function createMagnifyElement(backgroundImg) {
+  const viewportWidth = window.innerWidth;
+  if (viewportWidth < 1024) return;
+
+  let magnify = document.createElement("div");
+  magnify.setAttribute("id", "magnify");
+  magnify.setAttribute(
+    "class",
+    "w-36 h-36 absolute pointer-events-none rounded-full z-10 opacity-0 border border-4 border-light shadow-[0_5px_10px_-2px_rgba(0,0,0,0.3)] transition-opacity ease-linear duration-200"
+  );
+  magnify.setAttribute("style", `background-image: url(${backgroundImg});`);
+
+  const zoomContainer = document.getElementById("zoom");
+  zoomContainer.append(magnify);
+}
