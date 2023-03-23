@@ -686,8 +686,12 @@ video {
   margin-right: 0.5rem;
 }
 
-.mr-8 {
-  margin-right: 2rem;
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
 }
 
 .mt-2 {
@@ -762,8 +766,8 @@ video {
   min-height: 100vh;
 }
 
-.w-24 {
-  width: 6rem;
+.w-16 {
+  width: 4rem;
 }
 
 .w-36 {
@@ -1142,6 +1146,11 @@ video {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-sm {
@@ -1563,8 +1572,21 @@ input:focus~.toggle {
 }
 
 @media (min-width: 768px) {
+  .md\:mr-8 {
+    margin-right: 2rem;
+  }
+
+  .md\:w-24 {
+    width: 6rem;
+  }
+
   .md\:grid-cols-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
