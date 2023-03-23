@@ -12,6 +12,44 @@ a {
   text-decoration-line: underline;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: theme('fontFamily.display');
+  line-height:theme('lineHeight.none');
+  margin-bottom: theme('spacing.4');
+}
+
+h1 {
+  font-size: theme('fontSize.6xl');
+}
+
+h2 {
+  font-size: theme('fontSize.4xl');
+}
+
+h3 {
+  font-size: theme('fontSize.3xl');
+}
+
+h4 {
+  font-size: theme('fontSize.2xl');
+}
+
+h5 {
+  font-size: theme('fontSize.xl');
+}
+
+h6 {
+  font-size: theme('fontSize.base');
+}
+
+p {
+  margin-bottom: theme('spacing.4')
+}
+
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-top: theme('spacing.12');
+}
+
 /* Dark mode toggle */
 
 .toggle::before {
