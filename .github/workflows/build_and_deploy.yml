@@ -31,3 +31,4 @@ jobs:
           publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: production
+          cname: www.throughhoops.com
