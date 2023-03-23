@@ -161,17 +161,13 @@
  
 
 <div class="grid grid-cols-6 gap-2 mb-8">
-  <div class="col-span-2 relative -ml-8" id="zoom">
-    <img src="/herstory-hoops/assets/images/Hedy_Lamarr_small.png" alt="Hedy Lamarr"
-    class="w-full"
-    id="magnify-image" /> 
-    <div
-      id="magnify"
-      style="background-image: url('/herstory-hoops/assets/images/Hedy_Lamarr.png');"
-      class="w-36 h-36 absolute pointer-events-none rounded-full z-10 opacity-0 border border-4 border-light shadow-[0_5px_10px_-2px_rgba(0,0,0,0.3)] transition-opacity ease-linear duration-200"
-    ></div>
+  <div
+    class="col-span-6 lg:col-span-2 relative mb-4 lg:mb-0 lg:-ml-8"
+    id="zoom"
+  >
+    <img src="/herstory-hoops/assets/images/Hedy_Lamarr_small.png" alt="Hedy Lamarr" class="w-full" id="magnify-image"/>
   </div>
-  <section class="col-span-4">
+  <section class="col-span-6 lg:col-span-4">
     <h1>Hedy Lamarr</h1>
 
     
@@ -232,6 +228,23 @@ Lamarr was also a famous 1940's US Hollywood actress. She never loved the celebr
   false
 );
 
+function createMagnifyElement(backgroundImg) {
+  const viewportWidth = window.innerWidth;
+  if (viewportWidth < 1024) return;
+
+  let magnify = document.createElement("div");
+  magnify.setAttribute("id", "magnify");
+  magnify.setAttribute(
+    "class",
+    "w-36 h-36 absolute pointer-events-none rounded-full z-10 opacity-0 border border-4 border-light shadow-[0_5px_10px_-2px_rgba(0,0,0,0.3)] transition-opacity ease-linear duration-200"
+  );
+  magnify.setAttribute("style", `background-image: url(${backgroundImg});`);
+
+  const zoomContainer = document.getElementById("zoom");
+  zoomContainer.append(magnify);
+}
+
+  createMagnifyElement("/herstory-hoops/assets/images/Hedy_Lamarr.png")
 </script>
 </main>
         <footer class="flex justify-end mt-8 text-xs">
