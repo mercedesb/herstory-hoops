@@ -28,11 +28,15 @@
       class="bg-light text-dark dark:bg-dark dark:text-light min-h-screen overflow-hidden"
     >
       <div class="max-w-screen-xl pt-6 pb-8 mx-auto px-4">
-        <nav class="flex justify-between mb-8 text-xl">
+        <nav class="flex justify-between mb-8 text-base md:text-xl">
           <a href="{{ '/' | url }}"> {% render '_logo.html' %} </a>
           <ul class="list-none flex items-center">
-            <li class="mr-8"><a href="{{ '/about' | url }}">About</a></li>
-            <li class="mr-8"><a href="{{ '/contact' | url }}">Contact</a></li>
+            <li class="mr-3 md:mr-8">
+              <a href="{{ '/about' | url }}">About</a>
+            </li>
+            <li class="mr-4">
+              <a href="{{ '/contact' | url }}">Contact</a>
+            </li>
             <li>{% render '_dark_mode_toggle.html' %}</li>
           </ul>
         </nav>
