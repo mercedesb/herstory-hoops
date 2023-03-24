@@ -5,8 +5,12 @@ pagination:
   alias: hoop
 permalink: "hoops/{{ hoop.name | slugify }}/"
 layout: base_layout.html
+og_type: "article"
 eleventyComputed:
   title: "{{ hoop.name }} | Through Hoops"
+  description: "{{ hoop.bio | split: '\n' | first }}"
+  image: "/assets/images/{{hoop.img_name}}_small.png"
+  og_tag: "{{ hoop.name }}"
 ---
 
 {% assign paragraphs = hoop.bio | newline_to_br | split: '<br />' %} {% assign
