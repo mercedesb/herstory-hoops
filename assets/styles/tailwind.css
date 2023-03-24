@@ -1012,12 +1012,20 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-l {
+  border-left-width: 1px;
+}
+
 .border-double {
   border-style: double;
 }
 
 .border-hidden {
   border-style: hidden;
+}
+
+.border-current {
+  border-color: currentColor;
 }
 
 .border-dark {
@@ -1108,6 +1116,10 @@ video {
 
 .pb-8 {
   padding-bottom: 2rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .pt-6 {
