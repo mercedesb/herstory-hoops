@@ -22,7 +22,7 @@ layout: base_layout.html
           <img 
             src="{{"/assets/images/" | append: hoop.img_name | append: "_small.png" | url}}" 
             alt="{{ hoop.name }}" 
-            class="transition-transform duration-700 ease-linear hover:z-10 lg:hover:scale-200"
+            class="transition-transform duration-700 ease-linear hover:z-10 lg:motion-reduce:hover:transform-none lg:hover:scale-200"
            />
         </picture>
         </span>

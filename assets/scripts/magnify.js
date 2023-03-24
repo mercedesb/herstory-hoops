@@ -35,6 +35,13 @@ document.getElementById("zoom").addEventListener(
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 
