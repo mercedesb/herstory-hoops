@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Toni Morrison | Through Hoops</title>
+<meta name="description" content="Toni Morrison was a prolific, award-winning novelist whose stories centered the Black, specifically African-American, experience for a Black audience purposefully subverting the white gaze." />
+<meta property="og:title" content="Toni Morrison | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/toni-morrison/" />
+<meta property="og:description" content="Toni Morrison was a prolific, award-winning novelist whose stories centered the Black, specifically African-American, experience for a Black audience purposefully subverting the white gaze."
+/>
+<meta property="og:image" content="/assets/images/Toni_Morrison_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Toni Morrison" />
+<meta property="twitter:title" content="Toni Morrison | Through Hoops" />
+<meta property="twitter:description" content="Toni Morrison was a prolific, award-winning novelist whose stories centered the Black, specifically African-American, experience for a Black audience purposefully subverting the white gaze." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/toni-morrison/" />
+<meta property="twitter:image" content="/assets/images/Toni_Morrison_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -234,6 +250,13 @@ She became the first African-American woman to win the Nobel Prize in Literature
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

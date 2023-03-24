@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Lucille Ball | Through Hoops</title>
+<meta name="description" content="Lucille Ball, of 'I Love Lucy' fame, was a trailblazing woman in Hollywood. She was the first woman to run a major Hollywood studio in 1962." />
+<meta property="og:title" content="Lucille Ball | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/lucille-ball/" />
+<meta property="og:description" content="Lucille Ball, of 'I Love Lucy' fame, was a trailblazing woman in Hollywood. She was the first woman to run a major Hollywood studio in 1962."
+/>
+<meta property="og:image" content="/assets/images/Lucille_Ball_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Lucille Ball" />
+<meta property="twitter:title" content="Lucille Ball | Through Hoops" />
+<meta property="twitter:description" content="Lucille Ball, of 'I Love Lucy' fame, was a trailblazing woman in Hollywood. She was the first woman to run a major Hollywood studio in 1962." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/lucille-ball/" />
+<meta property="twitter:image" content="/assets/images/Lucille_Ball_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -237,6 +253,13 @@ She wasn't afraid to break expectations, her characters were often loud and zany
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

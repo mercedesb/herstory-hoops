@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Noor Inayat Khan | Through Hoops</title>
+<meta name="description" content="Noor Inayat Khan was a spy for the British in WWII." />
+<meta property="og:title" content="Noor Inayat Khan | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/noor-inayat-khan/" />
+<meta property="og:description" content="Noor Inayat Khan was a spy for the British in WWII."
+/>
+<meta property="og:image" content="/assets/images/Noor_Inayat_Khan_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Noor Inayat Khan" />
+<meta property="twitter:title" content="Noor Inayat Khan | Through Hoops" />
+<meta property="twitter:description" content="Noor Inayat Khan was a spy for the British in WWII." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/noor-inayat-khan/" />
+<meta property="twitter:image" content="/assets/images/Noor_Inayat_Khan_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -243,6 +259,13 @@ In September 1944, Khan was transferred to Dachau concentration camp with 3 othe
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

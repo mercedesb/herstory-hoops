@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Mary Seacole | Through Hoops</title>
+<meta name="description" content="Mary Seacole was a nurse and successful business woman during the mid-1800s." />
+<meta property="og:title" content="Mary Seacole | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/mary-seacole/" />
+<meta property="og:description" content="Mary Seacole was a nurse and successful business woman during the mid-1800s."
+/>
+<meta property="og:image" content="/assets/images/Mary_Seacole_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Mary Seacole" />
+<meta property="twitter:title" content="Mary Seacole | Through Hoops" />
+<meta property="twitter:description" content="Mary Seacole was a nurse and successful business woman during the mid-1800s." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/mary-seacole/" />
+<meta property="twitter:image" content="/assets/images/Mary_Seacole_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -231,6 +247,13 @@ She used her learnings in care and hygiene from Jamaican doctresses along with s
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Sarah Winnemucca | Through Hoops</title>
+<meta name="description" content="Sarah Winnemucca was a prominent Native author, educator, and activist. Born Thocmetony (Shell Flower) to a prominent Paiute family, she grew up caught between Native and white American cultures." />
+<meta property="og:title" content="Sarah Winnemucca | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/sarah-winnemucca/" />
+<meta property="og:description" content="Sarah Winnemucca was a prominent Native author, educator, and activist. Born Thocmetony (Shell Flower) to a prominent Paiute family, she grew up caught between Native and white American cultures."
+/>
+<meta property="og:image" content="/assets/images/Sarah_Winnemucca_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Sarah Winnemucca" />
+<meta property="twitter:title" content="Sarah Winnemucca | Through Hoops" />
+<meta property="twitter:description" content="Sarah Winnemucca was a prominent Native author, educator, and activist. Born Thocmetony (Shell Flower) to a prominent Paiute family, she grew up caught between Native and white American cultures." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/sarah-winnemucca/" />
+<meta property="twitter:image" content="/assets/images/Sarah_Winnemucca_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -246,6 +262,13 @@ In addition to her advocacy work, Sarah was also a teacher and ran a boarding sc
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

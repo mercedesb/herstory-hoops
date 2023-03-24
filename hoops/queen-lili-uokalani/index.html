@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Queen Lili‘uokalani | Through Hoops</title>
+<meta name="description" content="Queen Lili‘uokalani was the first woman to rule Hawai'i and their last monarch." />
+<meta property="og:title" content="Queen Lili‘uokalani | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/queen-lili-uokalani/" />
+<meta property="og:description" content="Queen Lili‘uokalani was the first woman to rule Hawai'i and their last monarch."
+/>
+<meta property="og:image" content="/assets/images/Queen_Lili_Uokalani_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Queen Lili‘uokalani" />
+<meta property="twitter:title" content="Queen Lili‘uokalani | Through Hoops" />
+<meta property="twitter:description" content="Queen Lili‘uokalani was the first woman to rule Hawai'i and their last monarch." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/queen-lili-uokalani/" />
+<meta property="twitter:image" content="/assets/images/Queen_Lili_Uokalani_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -240,6 +256,13 @@ Lili‘uokalani loved her people and her heritage. She was a skilled composer an
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

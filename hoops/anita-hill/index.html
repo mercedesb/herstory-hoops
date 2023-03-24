@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Anita Hill | Through Hoops</title>
+<meta name="description" content="Anita Hill was a law professor before being vaulted into the public eye in 1991. Hill testified that Supreme Court Justice nominee Clarence Thomas had sexually harassed her." />
+<meta property="og:title" content="Anita Hill | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/anita-hill/" />
+<meta property="og:description" content="Anita Hill was a law professor before being vaulted into the public eye in 1991. Hill testified that Supreme Court Justice nominee Clarence Thomas had sexually harassed her."
+/>
+<meta property="og:image" content="/assets/images/Anita_Hill_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Anita Hill" />
+<meta property="twitter:title" content="Anita Hill | Through Hoops" />
+<meta property="twitter:description" content="Anita Hill was a law professor before being vaulted into the public eye in 1991. Hill testified that Supreme Court Justice nominee Clarence Thomas had sexually harassed her." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/anita-hill/" />
+<meta property="twitter:image" content="/assets/images/Anita_Hill_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -231,6 +247,13 @@ In the 4 years following her testimony, the number of sexual harassment lawsuits
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

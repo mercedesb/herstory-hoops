@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Anna May Wong | Through Hoops</title>
+<meta name="description" content="Anna May Wong was Hollywood's first Chinese American movie star. She grew up in Chinatown during the time of the Chinese Exclusion Act with a fascination for movies. She got her first role as an extra at 14 in Red Lantern. By 17, she landed her first starring role in The Toll of the Sea to critical acclaim. " />
+<meta property="og:title" content="Anna May Wong | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/anna-may-wong/" />
+<meta property="og:description" content="Anna May Wong was Hollywood's first Chinese American movie star. She grew up in Chinatown during the time of the Chinese Exclusion Act with a fascination for movies. She got her first role as an extra at 14 in Red Lantern. By 17, she landed her first starring role in The Toll of the Sea to critical acclaim. "
+/>
+<meta property="og:image" content="/assets/images/Anna_May_Wong_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Anna May Wong" />
+<meta property="twitter:title" content="Anna May Wong | Through Hoops" />
+<meta property="twitter:description" content="Anna May Wong was Hollywood's first Chinese American movie star. She grew up in Chinatown during the time of the Chinese Exclusion Act with a fascination for movies. She got her first role as an extra at 14 in Red Lantern. By 17, she landed her first starring role in The Toll of the Sea to critical acclaim. " />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/anna-may-wong/" />
+<meta property="twitter:image" content="/assets/images/Anna_May_Wong_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -246,6 +262,13 @@ Paramount Pictures lured her back to Hollywood in 1930 with the promise of lead 
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>bell hooks | Through Hoops</title>
+<meta name="description" content="bell hooks was a preeminent feminist author and social critic. She wrote about gender, race, and class, rooting her critiques in love." />
+<meta property="og:title" content="bell hooks | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/bell-hooks/" />
+<meta property="og:description" content="bell hooks was a preeminent feminist author and social critic. She wrote about gender, race, and class, rooting her critiques in love."
+/>
+<meta property="og:image" content="/assets/images/bell_hooks_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="bell hooks" />
+<meta property="twitter:title" content="bell hooks | Through Hoops" />
+<meta property="twitter:description" content="bell hooks was a preeminent feminist author and social critic. She wrote about gender, race, and class, rooting her critiques in love." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/bell-hooks/" />
+<meta property="twitter:image" content="/assets/images/bell_hooks_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -246,6 +262,13 @@ In 2004, bell returned to her roots and started teaching at Berea College in Ken
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

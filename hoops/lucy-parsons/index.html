@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Lucy Parsons | Through Hoops</title>
+<meta name="description" content="Lucy Parsons was a leader in the radical labor movement for over 60 years (1870s - 1940s). Her activism doesn't fit neatly into any one box. " />
+<meta property="og:title" content="Lucy Parsons | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/lucy-parsons/" />
+<meta property="og:description" content="Lucy Parsons was a leader in the radical labor movement for over 60 years (1870s - 1940s). Her activism doesn't fit neatly into any one box. "
+/>
+<meta property="og:image" content="/assets/images/Lucy_Parsons_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Lucy Parsons" />
+<meta property="twitter:title" content="Lucy Parsons | Through Hoops" />
+<meta property="twitter:description" content="Lucy Parsons was a leader in the radical labor movement for over 60 years (1870s - 1940s). Her activism doesn't fit neatly into any one box. " />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/lucy-parsons/" />
+<meta property="twitter:image" content="/assets/images/Lucy_Parsons_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -240,6 +256,13 @@ When she died in a house fire, police confiscated her vast library and personal 
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

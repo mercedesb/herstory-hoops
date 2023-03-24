@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Yuri Kochiyama | Through Hoops</title>
+<meta name="description" content="Yuri Kochiyama was a peace and justice activist who advocated for liberation for all marginalized groups. She grew up in California and, by her own account, was politically unaware into her early 20s. After the bombing of Pearl Harbor, the government sent her family to a concentration camp in Arkansas. She spent 2 years in the camp and was awoken to social and political injustice directed to Japanese Americans and to Black Americans in the Jim Crow south. After the war, she married and moved to New York. Living in a housing project surrounded by mostly Black and Puerto Rican neighbors inspired her to become involved with the civil rights movement. In the early 60s, she and her family moved to Harlem where she enrolled in 'freedom schools' to learn about Black history and culture. She became deeply involved in community activism. After being detained by police in a protest over discriminatory hiring practices in 1963, she met Malcolm X when he came to lend support to those arrested and developed a friendship with him. " />
+<meta property="og:title" content="Yuri Kochiyama | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/yuri-kochiyama/" />
+<meta property="og:description" content="Yuri Kochiyama was a peace and justice activist who advocated for liberation for all marginalized groups. She grew up in California and, by her own account, was politically unaware into her early 20s. After the bombing of Pearl Harbor, the government sent her family to a concentration camp in Arkansas. She spent 2 years in the camp and was awoken to social and political injustice directed to Japanese Americans and to Black Americans in the Jim Crow south. After the war, she married and moved to New York. Living in a housing project surrounded by mostly Black and Puerto Rican neighbors inspired her to become involved with the civil rights movement. In the early 60s, she and her family moved to Harlem where she enrolled in 'freedom schools' to learn about Black history and culture. She became deeply involved in community activism. After being detained by police in a protest over discriminatory hiring practices in 1963, she met Malcolm X when he came to lend support to those arrested and developed a friendship with him. "
+/>
+<meta property="og:image" content="/assets/images/Yuri_Kochiyama_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Yuri Kochiyama" />
+<meta property="twitter:title" content="Yuri Kochiyama | Through Hoops" />
+<meta property="twitter:description" content="Yuri Kochiyama was a peace and justice activist who advocated for liberation for all marginalized groups. She grew up in California and, by her own account, was politically unaware into her early 20s. After the bombing of Pearl Harbor, the government sent her family to a concentration camp in Arkansas. She spent 2 years in the camp and was awoken to social and political injustice directed to Japanese Americans and to Black Americans in the Jim Crow south. After the war, she married and moved to New York. Living in a housing project surrounded by mostly Black and Puerto Rican neighbors inspired her to become involved with the civil rights movement. In the early 60s, she and her family moved to Harlem where she enrolled in 'freedom schools' to learn about Black history and culture. She became deeply involved in community activism. After being detained by police in a protest over discriminatory hiring practices in 1963, she met Malcolm X when he came to lend support to those arrested and developed a friendship with him. " />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/yuri-kochiyama/" />
+<meta property="twitter:image" content="/assets/images/Yuri_Kochiyama_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -228,6 +244,13 @@ In her life, Kochiyama advocated for racial justice, Puerto Rican independence, 
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

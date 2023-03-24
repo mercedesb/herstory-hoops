@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Junko Tabei | Through Hoops</title>
+<meta name="description" content="Junko Tabei was the 36th person to reach Mt. Everest's summit (and the first woman to do so though she didn't like to emphasize that). Growing up in post-WWII Japan, Tabei was a small child who fell in love with climbing at 10 years old. Though her family couldn't afford this expensive hobby, she picked it up again while she was in college. She joined a men's climbing club and despite the prejudiced attitude of some of her fellow climbers (thinking she was only there to find a husband), she quickly excelled. She started an all-women climbing club in 1969. " />
+<meta property="og:title" content="Junko Tabei | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/junko-tabei/" />
+<meta property="og:description" content="Junko Tabei was the 36th person to reach Mt. Everest's summit (and the first woman to do so though she didn't like to emphasize that). Growing up in post-WWII Japan, Tabei was a small child who fell in love with climbing at 10 years old. Though her family couldn't afford this expensive hobby, she picked it up again while she was in college. She joined a men's climbing club and despite the prejudiced attitude of some of her fellow climbers (thinking she was only there to find a husband), she quickly excelled. She started an all-women climbing club in 1969. "
+/>
+<meta property="og:image" content="/assets/images/Junko_Tabei_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Junko Tabei" />
+<meta property="twitter:title" content="Junko Tabei | Through Hoops" />
+<meta property="twitter:description" content="Junko Tabei was the 36th person to reach Mt. Everest's summit (and the first woman to do so though she didn't like to emphasize that). Growing up in post-WWII Japan, Tabei was a small child who fell in love with climbing at 10 years old. Though her family couldn't afford this expensive hobby, she picked it up again while she was in college. She joined a men's climbing club and despite the prejudiced attitude of some of her fellow climbers (thinking she was only there to find a husband), she quickly excelled. She started an all-women climbing club in 1969. " />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/junko-tabei/" />
+<meta property="twitter:image" content="/assets/images/Junko_Tabei_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -228,6 +244,13 @@ Her role as a climbing leader directly challenged cultural norms for women in Ja
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

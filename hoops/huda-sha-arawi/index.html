@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Huda Sha’arawi | Through Hoops</title>
+<meta name="description" content="Huda Sha’arawi was an anti-colonial activist, feminist, and founder of the women's movement in early 20th century Egypt. She grew up in the harem tradition and was frustrated by the isolation and restriction she faced as a girl. She valued her education and used it to propel her forward in her social causes. In 1908, she became deeply involved in political activism advocating for Egyptian independence from British rule. In her activism, she founded the first Egyptian secular philanthropic organization run by women for women, the Wafdist Women's Central Committee (the first political organization for Egyptian women), and the Egyptian Feminist Union (in response to women being denied the vote). She also led the largest women's protest in the revolution for independence. Despite women's involvement in Egyptian independence, they were left out of negotiations with Great Britain and were not granted the vote." />
+<meta property="og:title" content="Huda Sha’arawi | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/huda-sha-arawi/" />
+<meta property="og:description" content="Huda Sha’arawi was an anti-colonial activist, feminist, and founder of the women's movement in early 20th century Egypt. She grew up in the harem tradition and was frustrated by the isolation and restriction she faced as a girl. She valued her education and used it to propel her forward in her social causes. In 1908, she became deeply involved in political activism advocating for Egyptian independence from British rule. In her activism, she founded the first Egyptian secular philanthropic organization run by women for women, the Wafdist Women's Central Committee (the first political organization for Egyptian women), and the Egyptian Feminist Union (in response to women being denied the vote). She also led the largest women's protest in the revolution for independence. Despite women's involvement in Egyptian independence, they were left out of negotiations with Great Britain and were not granted the vote."
+/>
+<meta property="og:image" content="/assets/images/Huda_Sha_Arawi_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Huda Sha’arawi" />
+<meta property="twitter:title" content="Huda Sha’arawi | Through Hoops" />
+<meta property="twitter:description" content="Huda Sha’arawi was an anti-colonial activist, feminist, and founder of the women's movement in early 20th century Egypt. She grew up in the harem tradition and was frustrated by the isolation and restriction she faced as a girl. She valued her education and used it to propel her forward in her social causes. In 1908, she became deeply involved in political activism advocating for Egyptian independence from British rule. In her activism, she founded the first Egyptian secular philanthropic organization run by women for women, the Wafdist Women's Central Committee (the first political organization for Egyptian women), and the Egyptian Feminist Union (in response to women being denied the vote). She also led the largest women's protest in the revolution for independence. Despite women's involvement in Egyptian independence, they were left out of negotiations with Great Britain and were not granted the vote." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/huda-sha-arawi/" />
+<meta property="twitter:image" content="/assets/images/Huda_Sha_Arawi_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -228,6 +244,13 @@ Sha’arawi continued to organize for women's rights including suffrage, reforms
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Simone de Beauvoir | Through Hoops</title>
+<meta name="description" content="Simone de Beauvoir was a notable French philosopher and feminist theorist. She is most well-known for her revolutionary book 'The Second Sex' (1949) in which she lays the underpinnings for second-wave feminism." />
+<meta property="og:title" content="Simone de Beauvoir | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/simone-de-beauvoir/" />
+<meta property="og:description" content="Simone de Beauvoir was a notable French philosopher and feminist theorist. She is most well-known for her revolutionary book 'The Second Sex' (1949) in which she lays the underpinnings for second-wave feminism."
+/>
+<meta property="og:image" content="/assets/images/Simone_de_Beauvoir_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Simone de Beauvoir" />
+<meta property="twitter:title" content="Simone de Beauvoir | Through Hoops" />
+<meta property="twitter:description" content="Simone de Beauvoir was a notable French philosopher and feminist theorist. She is most well-known for her revolutionary book 'The Second Sex' (1949) in which she lays the underpinnings for second-wave feminism." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/simone-de-beauvoir/" />
+<meta property="twitter:image" content="/assets/images/Simone_de_Beauvoir_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -231,6 +247,13 @@ Although her work focuses mainly on gender and rarely considers race and other i
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Audre Lorde | Through Hoops</title>
+<meta name="description" content="Audre Lorde was a feminist writer known for her powerful poems and essays. She described herself as 'black, lesbian, mother, warrior, poet.'" />
+<meta property="og:title" content="Audre Lorde | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/audre-lorde/" />
+<meta property="og:description" content="Audre Lorde was a feminist writer known for her powerful poems and essays. She described herself as 'black, lesbian, mother, warrior, poet.'"
+/>
+<meta property="og:image" content="/assets/images/Audre_Lorde_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Audre Lorde" />
+<meta property="twitter:title" content="Audre Lorde | Through Hoops" />
+<meta property="twitter:description" content="Audre Lorde was a feminist writer known for her powerful poems and essays. She described herself as 'black, lesbian, mother, warrior, poet.'" />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/audre-lorde/" />
+<meta property="twitter:image" content="/assets/images/Audre_Lorde_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -228,6 +244,13 @@ She viewed our differences as strengths and tools for transforming oppressive sy
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 

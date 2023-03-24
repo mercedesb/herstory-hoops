@@ -22,6 +22,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
+    <title>Pat Maginnis | Through Hoops</title>
+<meta name="description" content="Pat Maginnis was considered America's first abortion rights activist. She reshaped the debate around women's rights." />
+<meta property="og:title" content="Pat Maginnis | Through Hoops" />
+<meta property="og:url" content="https://throughhoops.com/hoops/pat-maginnis/" />
+<meta property="og:description" content="Pat Maginnis was considered America's first abortion rights activist. She reshaped the debate around women's rights."
+/>
+<meta property="og:image" content="/assets/images/Pat_Maginnis_small.png" />
+<meta property="og:type" content="article" />
+<meta property="og:article:author" content="Mercedes Bernard" />
+<meta property="og:article:tag" content="Pat Maginnis" />
+<meta property="twitter:title" content="Pat Maginnis | Through Hoops" />
+<meta property="twitter:description" content="Pat Maginnis was considered America's first abortion rights activist. She reshaped the debate around women's rights." />
+<meta property="twitter:url" content="https://throughhoops.com/hoops/pat-maginnis/" />
+<meta property="twitter:image" content="/assets/images/Pat_Maginnis_small.png" />
+<meta name="twitter:creator" content="@mercedescodes" />
+
   </head>
   <body class="font-body leading-7 text-xl">
     <div
@@ -252,6 +268,13 @@ The women led classes on how to conduct DIY abortions. They instructed women on 
 );
 
 function createMagnifyElement(backgroundImg) {
+  // don't bother creating the element to animate if prefers-reduced-motion
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 1024) return;
 
