@@ -259,5 +259,12 @@
     "exceprt": "Nina Simone was a musical force impossible to classify. Simone's music became a powerful tool for social and political commentary, and she became known for her iconic protest songs, weaving the turbulent times of the 1960s into her compositions.",
     "quote": "At this crucial time in our lives, when everything is so desperate, when every day is a matter of survival, I don’t think you can help but be involved.",
     "img_name": "Nina_Simone"
+  },
+  {
+    "name": "Rachel Carson", 
+    "bio": "Rachel Carson was a pioneering American marine biologist, writer, and conservationist. She began her career as an aquatic biologist with the U.S. Bureau of Fisheries. She later transitioned to full-time nature writing in the 1950s.\nHer work, even in that era, reflected a profound ecological vision focused on the interconnectedness and sustainability of nature's systems.\nShe used a unique blend of scientific knowledge and poetic writing to reach a wide audience. Her groundbreaking book, \"Silent Spring\" (1962), catapulted her into global prominence. The book warned of the danger to nature caused by the misuse of chemical pesticides like DDT. Carson challenged the direction of modern science and ignited the contemporary environmental movement.\nDespite fierce opposition from chemical companies, \"Silent Spring\" sparked a remarkable shift in national pesticide policy, leading to a nationwide ban on DDT. It served as the catalyst for a grassroots environmental movement that culminated in the establishment of the U.S. Environmental Protection Agency (EPA).\nCarson's enduring message, articulated in \"Silent Spring,\" revolved around the profound impact of human actions on the natural world. She predicted escalating consequences, including pesticide resistance and ecological vulnerability to invasive species. Her legacy continues to inspire generations to protect the delicate balance of the natural world.",
+    "exceprt": "Rachel Carson was a pioneering American marine biologist, writer, and conservationist.",
+    "quote": "Man’s attitude toward nature is today critically important simply because we have now acquired a fateful power to alter and destroy nature. But man is a part of nature, and his war against nature is inevitably a war against himself.",
+    "img_name": "Rachel_Carson"
   }
 ]
